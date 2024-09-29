@@ -1,0 +1,108 @@
+body {
+    background-color: #d4e3d6;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #1c2938;
+    padding: 10px;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.navbar-brand:hover {
+    color: #ccc;
+}
+
+.navbar .github-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.search-bar {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%; 
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar::placeholder {
+    color: #ccc;
+}
+
+.sidebar-card {
+    background-color: #333;
+    height: 500px; 
+    color: white;
+    border-radius: 40px;
+    margin-left: 5px; /* Left margin for the sidebar */
+}
+
+.card {
+    background-color: #333;
+    color: white;
+    height: 150px;
+    width:100%;
+    margin-top: 30px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+.large-card {
+    background-color: #333;
+    color: white;
+    height: 180px;
+    border-radius: 40px;
+    width: 100%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.single-card {
+    flex: 1;
+    margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar-card {
+        height: 400px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .large-card {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-card {
+        height: 350px;
+    }
+    
+    .card {
+        height: 130px;
+    }
+
+    .large-card {
+        height: 180px;
+    }
+}

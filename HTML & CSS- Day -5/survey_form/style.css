@@ -1,0 +1,123 @@
+#first-name, #last-name {
+    display: inline-block;
+}
+
+#email{
+    width: 100%;
+}
+.required-label::after {
+    content: " *";
+    color: red;
+}
+
+.rating {
+    display: inline-block;
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2em;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    text-align: center;
+    padding: 10px;
+}
+
+table td {
+    border-bottom: 1px solid #ddd;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* Container with hover effect and subtle animation */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Container hover effect for interactivity */
+.container:hover {
+    transform: translateY(-10px); /* Move container upwards slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Add subtle animation for form elements */
+form {
+    max-width: 100%;
+    margin: auto;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Inputs with focus effect for interactivity */
+input, textarea {
+    width: 100%; /* Full width for inputs */
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Focus effect for input fields */
+input:focus, textarea:focus {
+    border-color: #00796b; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.4); /* Add shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Responsive table for smaller devices */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media screen and (max-width: 768px) {
+    /* Stack form inputs vertically on small devices */
+    input, textarea {
+        width: 100%;
+    }
+
+    table, th, td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
