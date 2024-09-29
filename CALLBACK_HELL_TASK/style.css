@@ -1,0 +1,109 @@
+body {
+    font-family: 'Indie Flower', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #FF4500, #FFD700, #00FF00);  /* Brighter Saffron, White, and Green */
+    animation: backgroundEffect 10s infinite alternate;
+}
+
+@keyframes backgroundEffect {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);  /* Lighter background to make the text pop */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s;
+    position: relative;
+    z-index: 2;
+  
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+
+
+@keyframes fadeInOut {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+#display {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 64px;
+    color: #50C878;  /* Emerald green */
+    text-shadow: 0px 0px 5px rgba(80, 200, 120, 0.5), 0px 0px 10px rgba(80, 200, 120, 0.3);  /* Light emerald glow */
+    animation: fadeInOut 1s ease-in-out infinite alternate;
+}
+
+.happy-message {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 40px;
+
+    color: #50C878;  /* Emerald green */
+    text-shadow: 0px 0px 6px rgba(80, 200, 120, 0.6), 0px 0px 12px rgba(80, 200, 120, 0.4);  /* Lighter emerald glow */
+    animation: scaleUp 2s ease-in-out;
+}
+
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Fireworks canvas styling */
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    #display {
+        font-size: 48px;
+    }
+
+    .happy-message {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 480px) {
+    #display {
+        font-size: 36px;
+    }
+
+    .happy-message {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+}
+#display {
+    font-size: 6vw;
+}
+
+.happy-message {
+    font-size: 4vw;
+}
+
